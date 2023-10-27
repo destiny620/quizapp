@@ -1,0 +1,23 @@
+{% extends 'base.html' %}
+
+{% block title %} home {% endblock %}
+{% block homeactive %} active {% endblock homeactive %}
+
+{% block css %}
+
+{% endblock %}
+{% block body %}
+{% if user.is_authenticated %}
+<div class="container">
+    <h1 style="color: blue; margin-top: 200px; margin-left: 200px;">Welcome to Destiny's Quiz Platform</h1>
+    <h1 style="color: blue; margin-left: 350px; margin-top: 80px;">Enjoy Playing</h1>
+
+    {% else %}
+    <div class="container">
+    <h1 style="color: red; margin-top: 200px;">Login or register to gain excess to play our Quiz</h1>
+    <h1 style="color: red; margin-left: 350px; margin-top: 80px;">Goodluck!!!</h1>
+</div>
+</div>
+{% endif %}
+
+{% endblock %}

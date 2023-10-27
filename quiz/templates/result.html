@@ -1,0 +1,31 @@
+{% extends 'base.html' %}
+
+{% block title %} Result {% endblock %}
+{% block resultactive %} active {% endblock resultactive %}
+
+{% block css %}
+
+{% endblock %}
+{% block body %}
+
+<div class="container">
+        
+    <div class="card-columns" style="padding: 10px; margin: 20px;">
+        <div class="card" align="centre " style="width: 32rem; border:5px black solid">
+            <img class="card-img-top" src="http://kmit.in/emagazine/wp-content/uploads/2018/02/karnataka-results.jpg" alt="Card image cap">
+            <div class="card-body">
+                <h5 class="card-title">Score: {{score}}</h5>
+                
+                <p class="card-text">Time Taken: {{time}} seconds</p>
+                <p class="card-text">Wrong answers: {{wrong}}</p>
+                <p class="card-text">Correct answers: {{correct}}</p>
+                <p class="card-text">Total: {{total}}</p>
+                <p class="card-text">Percentage: {{percentage}}%</p>
+                <h5>All the best for next quiz!</h5>
+            </div>
+        </div>
+    </div>
+ 
+</div>
+
+{% endblock %}

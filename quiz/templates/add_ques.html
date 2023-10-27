@@ -1,0 +1,25 @@
+{% extends 'base.html' %}
+
+{% block title %} Create a new Blog Post {% endblock %}
+{% block add_postactive %} active {% endblock add_postactive %}
+
+{% block css %}
+
+{% endblock %}
+{% block body %}
+
+
+
+<h1>Add Question</h1>
+<br><br>
+<div class="form-group">
+  <form action="/add_ques/" enctype="multipart/form-data" method="POST">
+      {% csrf_token %}
+      {{form.as_p}}
+      <button class="btn btn-secondary">Post</button>
+</div>
+
+
+
+
+{% endblock %}
